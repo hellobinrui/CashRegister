@@ -2,18 +2,13 @@ using System;
 
 namespace CashRegister
 {
-	public class Purchase
+	public class StubPurchase : Purchase
 	{
 		private readonly string content;
 
-		public Purchase()
+		public override string AsString()
 		{
-			content = "content";
-		}
-
-		public virtual string AsString()
-		{
-			return content + Timestamp();
+			return "stub content";
 		}
 
 		private string Timestamp()
